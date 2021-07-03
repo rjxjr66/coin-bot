@@ -2,3 +2,12 @@ version: '3'
 services:
   coinbot:
     build: .
+  db:
+    image: redis:6.2
+    ports:
+      - 6379:6379
+    command: redis-server --appendonly yes
+    volumes:
+      - redis-db:/data
+volumes:
+  redis-db:

@@ -20,7 +20,7 @@ class MyClient(discord.Client):
 
     today = datetime.datetime.today()
     today = f"{today.year}-{today.month}-{today.day}"
-    id = f'{message.author.id}'
+    id = bytes(str(message.author.id), encoding='utf-8')
     
     if message.content == '/파산신청':
       if id in db.keys():
@@ -33,4 +33,4 @@ class MyClient(discord.Client):
 
 
 client = MyClient()
-client.run('ODU1NjgzNzM3NTUwMzIzNzM0.YM2DlA.QmnxPrYVWQZ7mSLsSIN7H8kE5PY')
+client.run('ODU1NjgzNzM3NTUwMzIzNzM0.YM2DlA.yikdmN3ojAo25GpRmYsoIuRgFtI')

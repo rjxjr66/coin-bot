@@ -31,7 +31,7 @@ def balance(id, today, args):
   return "\n".join(msg)
 
 def accountNum(id, today, args):
-  return f"계좌번호: {id}"
+  return f"계좌번호: {id.decode('utf-8')}"
 
 def sendMoney(id, today, args):
   otherId, amt = args
