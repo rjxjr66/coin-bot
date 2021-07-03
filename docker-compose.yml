@@ -2,6 +2,9 @@ version: '3'
 services:
   coinbot:
     build: .
+    depends_on: 
+      - db
+    command: python main.py
   db:
     image: redis:6.2
     ports:

@@ -3,7 +3,7 @@ import json
 
 class Database:
   def __init__(self):
-    self.db = redis.StrictRedis(host='localhost', port=6379, db=0)
+    self.db = redis.StrictRedis(host='db', port=6379, db=0)
 
   def keys(self):
     return self.db.keys()

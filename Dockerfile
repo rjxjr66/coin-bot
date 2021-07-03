@@ -5,6 +5,6 @@ RUN pip install requests
 RUN pip install redis
 WORKDIR /app
 
-ADD . /app/
+COPY . /app/
 
 CMD [ "python", "./main.py" ]

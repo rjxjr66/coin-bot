@@ -1,3 +1,7 @@
+import sys
+sys.stdout.flush()
+print("실행되니?")
+
 import discord
 from Database import db
 import datetime
@@ -33,4 +37,4 @@ class MyClient(discord.Client):
 
 
 client = MyClient()
-client.run('ODU1NjgzNzM3NTUwMzIzNzM0.YM2DlA.yikdmN3ojAo25GpRmYsoIuRgFtI')
+client.run('your key')
