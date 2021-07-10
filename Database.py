@@ -20,6 +20,7 @@ class Database:
     self.db.set(key, json.dumps(value, indent=2).encode('utf-8'))
 
   def delete(self, key):
+    del self.cache[key]
     self.db.delete(key)
 
 db = Database()
