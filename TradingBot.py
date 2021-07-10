@@ -11,6 +11,7 @@ commands = {
   '매수' : buy,
   '매도' : sell,
   '파산신청': bankruptcycall,
+  '도움말': manual,
 }
 
 opCommands = {
@@ -20,7 +21,6 @@ opCommands = {
   '해금': unlockCoin,
   '파산':bankruptcy,
   '파산목록':bankruptcylist,
-  '도움말': manual,
 }
 
 class TradingBot:
