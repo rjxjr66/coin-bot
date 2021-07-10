@@ -33,4 +33,4 @@ class TradingBot:
       return "잘못된 명령이다 휴먼"
 
   def auth(self, user):
-    return len([ role for role in user.roles if role.id == 858228487915569192 ]) > 0
+    return len([ role for role in user.roles if role.name == "머스크" ]) > 0
