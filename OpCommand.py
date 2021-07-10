@@ -1,8 +1,5 @@
 from Database import db
 
-def opTest(id, today, args):
-  return "OP"
-
 def giveMoney(id, today, args):
   otherId, amt = args
   otherId = bytes(otherId, encoding='utf-8')
@@ -43,3 +40,19 @@ def unlockCoin(id, today, args):
     return '해금됐다'
 
   return '잠금되어있지않다'
+
+def bankruptcy(id, today, args):
+  otherId = args[0]
+  bOtherId = bytes(args[0], encoding='utf-8')
+  if bOtherId in db.keys() and otherId in db['bankrupt']:
+    del db['bankrupt'][otherId]
+    db.delete(bOtherId)
+    return "파산됐다 휴먼"
+  else:
+    return "계좌번호 확인해라 휴먼"
+
+def bankruptcylist(id, today, args):
+  if 'bankrupt' not in db.keys():
+    db['bankrupt'] = {}
+
+  return [ id for id in db['bankrupt'].keys() ]

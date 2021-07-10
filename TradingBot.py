@@ -1,6 +1,6 @@
-from Commands import attend, balance, accountNum, sendMoney
+from Commands import attend, balance, accountNum, sendMoney, bankruptcycall
 from coins import getPrice, buy, sell
-from OpCommand import opTest, giveMoney, stealMoney, lockCoin, unlockCoin
+from OpCommand import giveMoney, stealMoney, lockCoin, unlockCoin, bankruptcy, bankruptcylist
 
 commands = {
   '출석': attend,
@@ -10,14 +10,16 @@ commands = {
   '코인가격': getPrice,
   '매수' : buy,
   '매도' : sell,
+  '파산신청': bankruptcycall,
 }
 
 opCommands = {
-  '테스트': opTest,
   '입금': giveMoney,
   '출금': stealMoney,
   '잠금': lockCoin,
   '해금': unlockCoin,
+  '파산':bankruptcy,
+  '파산목록':bankruptcylist,
 }
 
 class TradingBot:

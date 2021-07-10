@@ -19,7 +19,7 @@ class Database:
   def __setitem__(self, key, value):
     self.db.set(key, json.dumps(value, indent=2).encode('utf-8'))
 
-  def __del__(self, key):
+  def delete(self, key):
     self.db.delete(key)
 
 db = Database()

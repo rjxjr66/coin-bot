@@ -50,3 +50,13 @@ def sendMoney(id, today, args):
       return "너 거지다 휴먼"
   else:
     return "계좌번호 확인해라 휴먼"
+
+def bankruptcycall(id, today, args):
+  if 'bankrupt' not in db.keys():
+    db['bankrupt'] = {}
+
+  db['bankrupt'][id.decode('utf-8')] = True
+  db['bankrupt'] = db['bankrupt']
+
+  return "파산신청 됐다 휴먼"
+
