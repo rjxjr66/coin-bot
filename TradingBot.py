@@ -1,5 +1,5 @@
-from Commands import attend, balance, accountNum, sendMoney, bankruptcycall
-from coins import getPrice, buy, sell, manual
+from Commands import attend, balance, accountNum, sendMoney, bankruptcycall, manual
+from coins import getPrice, buy, sell
 from OpCommand import giveMoney, stealMoney, lockCoin, unlockCoin, bankruptcy, bankruptcylist
 
 commands = {
