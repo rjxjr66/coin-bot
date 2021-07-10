@@ -1,5 +1,5 @@
 from Commands import attend, balance, accountNum, sendMoney, bankruptcycall
-from coins import getPrice, buy, sell
+from coins import getPrice, buy, sell, manual
 from OpCommand import giveMoney, stealMoney, lockCoin, unlockCoin, bankruptcy, bankruptcylist
 
 commands = {
@@ -20,6 +20,7 @@ opCommands = {
   '해금': unlockCoin,
   '파산':bankruptcy,
   '파산목록':bankruptcylist,
+  '도움말': manual,
 }
 
 class TradingBot:
