@@ -35,6 +35,7 @@ def accountNum(id, today, args):
 
 def sendMoney(id, today, args):
   otherId, amt = args
+  otherId = bytes(otherId, encoding='utf-8')
   if otherId in db.keys():
     amt = int(amt)
     if db[id]['money'] >= amt:

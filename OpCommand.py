@@ -5,6 +5,7 @@ def opTest(id, today, args):
 
 def giveMoney(id, today, args):
   otherId, amt = args
+  otherId = bytes(otherId, encoding='utf-8')
   if otherId in db.keys():
     amt = int(amt)
     db[otherId]['money'] += amt
@@ -16,6 +17,7 @@ def giveMoney(id, today, args):
 
 def stealMoney(id, today, args):
   otherId, amt = args
+  otherId = bytes(otherId, encoding='utf-8')
   if otherId in db.keys():
     amt = int(amt)
     db[otherId]['money'] -= amt
